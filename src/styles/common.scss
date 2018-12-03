@@ -1,0 +1,14 @@
+.tooltip-underline {
+  background-repeat: repeat-x;
+  background-image: url("/underline.svg");
+  background-position: 2px 100%;
+  background-size: 4px 2px;
+  padding-bottom: 4px;
+  cursor: help;
+  // Alternative:
+  // border-bottom: 2px dotted #9AA3AD;
+}
+.separator {
+  font-weight: 300;
+  color: #c1c1c1;
+}
