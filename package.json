@@ -9,8 +9,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "register-service-worker": "^1.5.2",
+    "apexcharts": "^2.2.4",
     "vue": "^2.5.17",
+    "vue-apexcharts": "^1.2.7",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -27,6 +28,8 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "gulp": "^3.9.1",
+    "gulp-surge": "^0.1.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"

@@ -1,7 +1,5 @@
 <template>
   <aside class="sidebar-right">
-    <!-- <img v-if="this.$store.state.show_sidebar_placeholder" src="/placeholder-sidebar2.png" width="315" /> -->
-    <!-- <img v-if="this.$store.state.show_sidebar_placeholder" src="/placeholder-system.png" width="315" /> -->
     <SidebarDashboard />
   </aside>
 </template>
@@ -24,5 +22,7 @@ aside.sidebar-right {
   @include respond-to(m) {
     display: none;
   }
+  background: #fff;
+  box-shadow: -1px 0px 3px rgba(159, 159, 159, 0.25);
 }
 </style>

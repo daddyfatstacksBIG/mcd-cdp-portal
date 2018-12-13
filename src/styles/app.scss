@@ -1,5 +1,7 @@
-@import 'fonts.scss';
 @import 'normalize.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'typography.scss';
 @import 'breakpoints.scss';
 @import 'helpers.scss';
 @import 'common.scss';
@@ -9,6 +11,7 @@ html {
 }
 body {
   margin: 0;
+  background: #f6f8f9;
   font-family: 'SF Pro Text', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,4 +24,22 @@ button {
 }
 * {
   box-sizing: border-box;
+}
+
+#app > .grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 315px;
+  grid-template-areas: "navbar view sidebar";
+  @include respond-to(m) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px auto;
+    grid-template-areas: "navbar" "view";
+  }
+}
+#view {
+  padding: 55px 32px;
+  @include respond-to(s) {
+    padding: 32px 20px;
+  }
+  background: #f6f8f9;
 }

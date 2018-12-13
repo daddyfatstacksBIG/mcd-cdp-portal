@@ -30,18 +30,18 @@ h1 {
   color: #231536;
   font-weight: 600;
   font-size: 1.8rem;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.03rem;
 }
 table {
   width: 100%;
   border-spacing: 0;
   tr:not(:last-child) td {
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
   }
   td {
     padding: 1.2rem 0 1rem;
     &.pair {
-      color: #4F445E;
+      color: #4f445e;
       font-weight: 700;
       font-size: 1.3rem;
     }

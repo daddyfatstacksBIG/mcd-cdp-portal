@@ -45,9 +45,8 @@ export default {
   section {
     padding: 0 20px;
     border-bottom: 1px solid #E0E0E0;
-    // height: 100px;
     box-sizing: content-box;
-    
+
     &.header {
       height: 50px;
       margin-top: 1px;

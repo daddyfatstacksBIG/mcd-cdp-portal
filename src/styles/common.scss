@@ -12,3 +12,52 @@
   font-weight: 300;
   color: #c1c1c1;
 }
+
+.view-heading {
+  display: block;
+  padding-right: 20px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: -1pt;
+  color: #231536;
+}
+
+table.maker-table {
+  width: 100%;
+  border-spacing: 0;
+  padding: 1rem 1.4rem;
+  thead {
+    color: #808080;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    th { padding: 0.6rem 0 2rem; }
+  }
+  tr:not(:last-child) td {
+    border-bottom: 1px solid #E5E5E5;
+  }
+  tbody tr.hovered td,
+  tbody tr:hover td {
+    background: #F6F6F7;
+  }
+
+  tbody td {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-web-text;
+    height: 55px;
+  }
+}
+
+// ApexCharts clipping bug fix
+.apexcharts-canvas > svg {
+  overflow: visible;
+}
+// ApexCharts cursor on donut section hover
+.apexcharts-canvas g.apexcharts-pie-series > path {
+  cursor: pointer;
+}

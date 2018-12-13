@@ -9,16 +9,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="asset in assets" :key="asset.name">
+      <tr v-for="token in walletTokens" :key="token.address">
         <td class="asset">
           <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="2" y1="2" x2="2" y2="13" :stroke="assetColor(asset.name)" stroke-width="4" stroke-linecap="round" />
+            <line x1="2" y1="2" x2="2" y2="13" :stroke="token.color" stroke-width="4" stroke-linecap="round" />
           </svg>
-          {{ asset.name.toUpperCase() }}
+          {{ token.symbol }}
         </td>
-        <td class="balance">{{ asset.balance }}</td>
+        <td class="balance">{{ token.balance }}</td>
         <td><button>SEND</button></td>
-        <td class="unlock"><ToggleSwitch :on=asset.unlocked /></td>
+        <td class="unlock"><ToggleSwitch :on=token.unlocked /></td>
       </tr>
     </tbody>
   </table>
@@ -34,8 +34,9 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'assets',
-      'assetColor'
+      'walletTokens',
+      'cdps',
+      'collateralColor'
     ])
   }
 };
@@ -46,8 +47,8 @@ button {
   color: #231536;
   font-weight: 500;
   font-size: 1rem;
-  background: #E2E9EC;
-  border-radius: 4px; 
+  background: #e2e9ec;
+  border-radius: 4px;
   width: 4.8rem;
   height: 2.4rem;
   line-height: 2.3rem;
@@ -63,7 +64,7 @@ table {
   border-spacing: 0;
   padding: 1rem 1.4rem;
   thead {
-    color: #48495F;
+    color: #48495f;
     text-align: left;
     text-transform: uppercase;
     font-size: 1rem;
@@ -74,7 +75,7 @@ table {
   tbody td {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #48495F;
+    color: #48495f;
     padding: 1.2rem 0 1rem;
     &.asset {
       white-space: nowrap;
