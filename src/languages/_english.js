@@ -24,52 +24,65 @@ export default {
     'headline': 'Trade, Borrow, and Save using Dai.',
     'trade_card': {
       'title': 'Trade',
-      'description': "Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.",
+      'description':
+          "Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.",
       'button': 'Start Trading'
     },
     'borrow_card': {
       'title': 'Borrow',
-      'description': 'Lock your tokens as collateral to generate Dai, a decentralized stablecoin soft-pegged to 1 USD.',
+      'description':
+          'Lock your tokens as collateral to generate Dai, a decentralized stablecoin soft-pegged to 1 USD.',
       'button': 'Borrow Dai'
     },
     'save_card': {
       'title': 'Save',
-      'description': 'Earn savings on your Dai by locking it into Oasis Save. Automatic and non-custodial.',
+      'description':
+          'Earn savings on your Dai by locking it into Oasis Save. Automatic and non-custodial.',
       'button': 'Save Dai'
     },
     'token_section_title': 'Currently supported on Oasis',
     'token_section_only_on_trade': '* Only available on Oasis Trade',
     'section1_title': 'What is Oasis?',
-    'section1_p': 'Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai, and earn savings — all in one place.',
+    'section1_p':
+        'Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai, and earn savings — all in one place.',
     'section2_title': 'Secure protocol built on Ethereum',
-    'section2_p': 'Oasis is built on top of audited and formally verified smart contracts created by Maker, the industry leader in secure decentralized finance.',
+    'section2_p':
+        'Oasis is built on top of audited and formally verified smart contracts created by Maker, the industry leader in secure decentralized finance.',
     'section3_title': 'Completely permissionless',
-    'section3_p': 'Oasis is a decentralized, non-custodial platform, accessible using an Ethereum-supported wallet. You—and only you—control your assets.',
+    'section3_p':
+        'Oasis is a decentralized, non-custodial platform, accessible using an Ethereum-supported wallet. You—and only you—control your assets.',
     'questions_title': 'Questions',
     'question1': 'What is Oasis?',
-    'answer1': 'Oasis is a decentralized application that runs on the Ethereum blockchain. Anyone can use Oasis to trade tokens, borrow against them, and earn savings using Dai.',
+    'answer1':
+        'Oasis is a decentralized application that runs on the Ethereum blockchain. Anyone can use Oasis to trade tokens, borrow against them, and earn savings using Dai.',
     'question2': 'What is Dai?',
-    'answer2': 'Dai is the world’s first unbiased currency and leading decentralized stablecoin soft-pegged to the US Dollar. Learn more about Dai {0}.',
+    'answer2':
+        'Dai is the world’s first unbiased currency and leading decentralized stablecoin soft-pegged to the US Dollar. Learn more about Dai {0}.',
     'answer2_link1_url': 'https://makerdao.com/en/',
     'answer2_link1_text': 'here',
     'question3': 'Do I need an account?',
-    'answer3': 'You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as {0}, {1}, etc.',
+    'answer3':
+        'You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as {0}, {1}, etc.',
     'answer3_link1_url': 'https://metamask.io/',
     'answer3_link1_text': 'Metamask',
     'answer3_link2_url': 'https://wallet.coinbase.com/',
     'answer3_link2_text': 'Coinbase Wallet',
     'question5': 'Is Oasis secure?',
-    'answer5': 'Security is our top priority. The Oasis team regularly conducts audits on our smart contracts. In addition, the Oasis code is {0}, giving the community the ability to pressure test and audit the core technology.',
+    'answer5':
+        'Security is our top priority. The Oasis team regularly conducts audits on our smart contracts. In addition, the Oasis code is {0}, giving the community the ability to pressure test and audit the core technology.',
     'answer5_link1_url': 'https://github.com/OasisDEX',
     'answer5_link1_text': 'open-source',
     'question6': 'Will I be charged a fee to use Oasis?',
-    'answer6': 'Oasis is free to use. However, you will have to pay gas and other fees associated with the Maker Protocol, such as Stability Fees.',
+    'answer6':
+        'Oasis is free to use. However, you will have to pay gas and other fees associated with the Maker Protocol, such as Stability Fees.',
     'question7': 'How can I contact the Oasis team?',
     'answer7': 'You can reach the Oasis team by contacting us on {0}.',
     'answer7_link1_url': 'https://chat.makerdao.com',
     'answer7_link1_text': 'chat',
-    'question8': 'Can I buy Bitcoin or Ethereum on Oasis using a credit card or via my bank account?',
-    'answer8': 'You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai to buy Ethereum and other supported tokens.',
+    'question8':
+        'Can I buy Bitcoin or Ethereum on Oasis using a credit card or via my bank account?',
+    'answer8':
+        'You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai to buy Ethereum and other supported tokens.',
     'read_only': 'Read-Only',
     'wallet_connect': 'Wallet Connect',
     'wallet_link': 'Coinbase Wallet'
@@ -146,51 +159,70 @@ export default {
     'tx_hash': 'Transaction hash',
     'view_tx_details': 'View transaction details',
     'select_title': 'Select a collateral type',
-    'select_text': 'Each collateral type has its own risk parameters. You can lock up additional collateral types later.',
+    'select_text':
+        'Each collateral type has its own risk parameters. You can lock up additional collateral types later.',
 
     'setup_proxy_title': 'Vault Setup and Management',
-    'setup_proxy_proxy_text': 'Configure your Vault for easy management. This only has to be done once.',
-    'setup_proxy_allowance_text': 'This permission allows Oasis to interact with your {0}. This has to be done once for each new collateral type.',
+    'setup_proxy_proxy_text':
+        'Configure your Vault for easy management. This only has to be done once.',
+    'setup_proxy_allowance_text':
+        'This permission allows Oasis to interact with your {0}. This has to be done once for each new collateral type.',
     'setup_proxy_proxy_button': 'Setup',
     'setup_proxy_allowance_button': 'Set',
     'setup_vault': 'Setup Vault',
 
     'deposit_title': 'Deposit {0} and Generate Dai',
-    'deposit_text': 'Different collateral types have different risk parameters and collateralization ratios.',
+    'deposit_text':
+        'Different collateral types have different risk parameters and collateralization ratios.',
     // "deposit_sidebar_title": "{0} Risk Parameters",
-    'deposit_form_field1_title': 'How much {0} would you like to lock in your Vault?',
-    'deposit_form_field1_text': 'The amount of {0} you lock up determines how much Dai you can generate.',
-    // "deposit_form_field2_title": "What target collateralization ratio would you like to stay above?",
-    // "deposit_form_field2_text": "If your Vault drops below this target it will be considered {0} risk.",
+    'deposit_form_field1_title':
+        'How much {0} would you like to lock in your Vault?',
+    'deposit_form_field1_text':
+        'The amount of {0} you lock up determines how much Dai you can generate.',
+    // "deposit_form_field2_title": "What target collateralization ratio would
+    // you like to stay above?", "deposit_form_field2_text": "If your Vault
+    // drops below this target it will be considered {0} risk.",
     // "deposit_form_field2_after": "Suggested:",
     'deposit_form_field3_title': 'How much Dai would you like to generate?',
-    'deposit_form_field3_text': 'Generate an amount that is safely above the liquidation ratio.',
+    'deposit_form_field3_text':
+        'Generate an amount that is safely above the liquidation ratio.',
     // "deposit_form_field3_after1": "Max at target ratio",
     'deposit_form_field3_after2': 'Max avail to generate',
 
     'confirm_title': 'Confirm Vault Details',
     'confirmed_title': 'Your Vault is being created',
-    'confirmed_text': 'The estimated time is {0}. You can safely leave this page.',
+    'confirmed_text':
+        'The estimated time is {0}. You can safely leave this page.',
     'post_confirmed_title': 'Your Vault has been created',
     'post_confirmed_text': 'You can safely leave this page.',
     'insufficient_ilk_balance': 'Insufficient {0} balance',
-    'has_understood_stability_fee': 'I understand the Stability Fee is not fixed and is likely to change over time',
-    'collateralization_warning': 'The amount of Dai your generating is putting your Vault at risk of liquidation',
+    'has_understood_stability_fee':
+        'I understand the Stability Fee is not fixed and is likely to change over time',
+    'collateralization_warning':
+        'The amount of Dai your generating is putting your Vault at risk of liquidation',
     'draw_too_much_dai': 'Vault below liquidation threshold',
     'below_dust_limit': 'A Vault requires a minimum of {0} Dai to be generated',
-    'dust_max_payback': 'You can repay all your outstanding debt, or a maximum of {0} Dai',
-    'stability_fee_description': 'The fee calculated based on the outstanding debt of your Vault. This is continuously added to your existing debt.',
-    'liquidation_ratio_description': 'The collateral-to-dai ratio at which the Vault becomes vulnerable to liquidation.',
-    'liquidation_penalty_description': 'The fee that is added to the total outstanding DAI debt when a liquidation occurs.',
+    'dust_max_payback':
+        'You can repay all your outstanding debt, or a maximum of {0} Dai',
+    'stability_fee_description':
+        'The fee calculated based on the outstanding debt of your Vault. This is continuously added to your existing debt.',
+    'liquidation_ratio_description':
+        'The collateral-to-dai ratio at which the Vault becomes vulnerable to liquidation.',
+    'liquidation_penalty_description':
+        'The fee that is added to the total outstanding DAI debt when a liquidation occurs.',
     'waiting_for_comfirmations': 'Waiting for confirmations... {0} of {1}',
     'confirmed_with_confirmations': 'Confirmed with {0} confirmations',
-    'waiting_for_confirmations_info': "Waiting for confirmations reduces the risk of your Vault address changing. We require users to wait 10 block confirmations to ensure it's been created successfully. This will often take around 2 minutes.",
-    'proxy_failure_not_mined': 'This transaction is taking longer than usual...',
-    'proxy_failure_not_mined_info': 'Transactions to the network may sometimes take longer than expected. This can be for a variety of reasons but may be due to a congested network or a transaction sent with a low gas price. Some wallets enable users to resend a transaction with a higher gas price, otherwise check for your transaction on etherscan and come back again later'
+    'waiting_for_confirmations_info':
+        "Waiting for confirmations reduces the risk of your Vault address changing. We require users to wait 10 block confirmations to ensure it's been created successfully. This will often take around 2 minutes.",
+    'proxy_failure_not_mined':
+        'This transaction is taking longer than usual...',
+    'proxy_failure_not_mined_info':
+        'Transactions to the network may sometimes take longer than expected. This can be for a variety of reasons but may be due to a congested network or a transaction sent with a low gas price. Some wallets enable users to resend a transaction with a higher gas price, otherwise check for your transaction on etherscan and come back again later'
   },
   'cdp_migrate': {
     'select_title': 'Select Vault to Migrate',
-    'select_text': 'Select a Vault and pay back the stability fee in DAI or MKR to migrate it to Multi-collateral Dai and the new CDP Portal.',
+    'select_text':
+        'Select a Vault and pay back the stability fee in DAI or MKR to migrate it to Multi-collateral Dai and the new CDP Portal.',
     'current_ratio': 'Current Ratio',
     'dai_debt': 'Dai debt',
     'fee_in_dai': 'Fee in Dai',
@@ -200,9 +232,11 @@ export default {
     'trust_site_with_dai': 'Trust this site with my DAI',
     'pay_and_migrate': 'Pay and Migrate',
     'migrate_in_progress_header': 'Your CDP is being migrated',
-    'migrate_in_progress_text': 'The estimated time is 8 minutes. You can safely leave this page and return.',
+    'migrate_in_progress_text':
+        'The estimated time is 8 minutes. You can safely leave this page and return.',
     'migrate_complete_header': 'CDP Migration complete',
-    'migrate_complete_text': 'CDP #{0} has been successfully migrated to Multi-collateral Dai and the new CDP Portal.',
+    'migrate_complete_text':
+        'CDP #{0} has been successfully migrated to Multi-collateral Dai and the new CDP Portal.',
     'view_transaction_details': 'View transaction details',
     'migrate_another_cdp': 'Migrate another CDP',
     'exit_to_cdp_portal': 'Exit to CDP Portal'
@@ -216,7 +250,8 @@ export default {
     'setup_header': 'Deploy Proxy',
     'open_vault': 'Earn savings on your Dai by locking into Oasis Save',
     'deposit_form_title': 'Enter the amount you would like to deposit.',
-    'setup_proxy_text': 'Setting up your proxy will bundle multiple transactions into one, saving transaction time and gas costs. This only has to be done once.',
+    'setup_proxy_text':
+        'Setting up your proxy will bundle multiple transactions into one, saving transaction time and gas costs. This only has to be done once.',
     'confirm_title': 'Confirm Deposit',
     // "post_confirm_title": "Deposit Confirmed"
   },
@@ -288,11 +323,13 @@ export default {
   'save': {
     'title': 'Balance',
     'dai_savings_rate': 'Dai Savings rate',
-    'description': 'Receive savings on your Dai. Deposit or withdraw at any time.',
+    'description':
+        'Receive savings on your Dai. Deposit or withdraw at any time.',
     'deposit_amount': 'Deposit amount',
     'withdraw_amount': 'Withdraw amount',
     'deposit_dai': 'Deposit Dai',
-    'deposit_dai_subheading': 'Start earning as soon as your deposit is confirmed.',
+    'deposit_dai_subheading':
+        'Start earning as soon as your deposit is confirmed.',
     'get_started_title': 'Start earning on your Dai today'
   },
   'verbs': {
@@ -385,8 +422,11 @@ export default {
   },
   notifications: {
     claim: 'Claim',
-    claim_collateral: 'Your {0} Vault auction(s) have completed. You have {1} {2} to claim',
-    non_vault_owner: 'The owner of this position ({0}) does not match the connected walleted address',
-    non_overview_owner: 'You are currently viewing the Overview of another address ({0})'
+    claim_collateral:
+        'Your {0} Vault auction(s) have completed. You have {1} {2} to claim',
+    non_vault_owner:
+        'The owner of this position ({0}) does not match the connected walleted address',
+    non_overview_owner:
+        'You are currently viewing the Overview of another address ({0})'
   }
 };

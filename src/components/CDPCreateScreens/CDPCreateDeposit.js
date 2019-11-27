@@ -1,19 +1,20 @@
+import {Box, Card, Grid, Input, Text} from '@makerdao/ui-components-core';
+import {RatioTextDisplay} from 'components/RatioDisplay';
+import {TextBlock} from 'components/Typography';
+import useLanguage from 'hooks/useLanguage';
+import useTokenAllowance from 'hooks/useTokenAllowance';
 import React from 'react';
-import { Box, Grid, Text, Input, Card } from '@makerdao/ui-components-core';
-import { greaterThanOrEqual, greaterThan, BN } from 'utils/bignumber';
-import { TextBlock } from 'components/Typography';
-import { getUsdPrice, calcCDPParams } from 'utils/cdp';
+import {BN, greaterThan, greaterThanOrEqual} from 'utils/bignumber';
+import {calcCDPParams, getUsdPrice} from 'utils/cdp';
 import {
   formatCollateralizationRatio,
   prettifyNumber,
   safeToFixed
 } from 'utils/ui';
-import { cdpParamsAreValid } from '../../utils/cdp';
-import useTokenAllowance from 'hooks/useTokenAllowance';
-import useLanguage from 'hooks/useLanguage';
+
+import {cdpParamsAreValid} from '../../utils/cdp';
 import ScreenFooter from '../ScreenFooter';
 import ScreenHeader from '../ScreenHeader';
-import { RatioTextDisplay } from 'components/RatioDisplay';
 
 function OpenCDPForm({
   selectedIlk,
@@ -23,20 +24,14 @@ function OpenCDPForm({
   collateralizationRatio,
   showRatioWarning
 }) {
-  const { lang } = useLanguage();
-  const userHasSufficientGemBalance = greaterThanOrEqual(
-    selectedIlk.userGemBalance,
-    cdpParams.gemsToLock
-  );
-  const userCanDrawDaiAmount = greaterThanOrEqual(
-    daiAvailable,
-    cdpParams.daiToDraw
-  );
+  const {lang} = useLanguage();
+  const userHasSufficientGemBalance =
+      greaterThanOrEqual(selectedIlk.userGemBalance, cdpParams.gemsToLock);
+  const userCanDrawDaiAmount =
+      greaterThanOrEqual(daiAvailable, cdpParams.daiToDraw);
 
-  const belowDustLimit = greaterThan(
-    selectedIlk.data.dust,
-    cdpParams.daiToDraw
-  );
+  const belowDustLimit =
+      greaterThan(selectedIlk.data.dust, cdpParams.daiToDraw);
 
   const fields = [
     [
@@ -49,36 +44,27 @@ function OpenCDPForm({
         selectedIlk.currency.symbol
       ),
       <Input
-        key="collinput"
-        name="gemsToLock"
-        after={selectedIlk.data.gem}
-        type="number"
-        value={cdpParams.gemsToLock}
-        onChange={handleInputChange}
-        width={300}
-        failureMessage={
-          userHasSufficientGemBalance || !cdpParams.gemsToLock
-            ? null
-            : lang.formatString(
-                lang.cdp_create.insufficient_ilk_balance,
-                selectedIlk.currency.symbol
-              )
-        }
-      />,
+  key = "collinput"
+  name = "gemsToLock"
+  after = {selectedIlk.data.gem} type = "number"
+  value = {cdpParams.gemsToLock} onChange = {handleInputChange} width =
+      {300} failureMessage =
+  {
+    userHasSufficientGemBalance || !cdpParams.gemsToLock
+        ? null
+        : lang.formatString(lang.cdp_create.insufficient_ilk_balance,
+                            selectedIlk.currency.symbol)
+  } />,
       <Box key="ba">
-        <Text t="subheading">{lang.your_balance} </Text>
-        <Text
-          t="caption"
-          display="inline-block"
-          ml="s"
-          color="darkLavender"
+        <Text t="subheading">{lang.your_balance} </Text >
+      < Text
+  t = "caption"
+  display = "inline-block"
+  ml = "s"
+  color = "darkLavender"
           onClick={() => {
-            handleInputChange({
-              target: {
-                name: 'gemsToLock',
-                value: selectedIlk.userGemBalance
-              }
-            });
+    handleInputChange(
+        {target : {name : 'gemsToLock', value : selectedIlk.userGemBalance}});
           }}
         >
           {prettifyNumber(selectedIlk.userGemBalance)} {selectedIlk.data.gem}
@@ -89,40 +75,34 @@ function OpenCDPForm({
       lang.cdp_create.deposit_form_field3_title,
       lang.cdp_create.deposit_form_field3_text,
       <Input
-        key="daiToDraw"
-        name="daiToDraw"
-        after="DAI"
-        width={300}
-        type="number"
-        failureMessage={
-          (belowDustLimit
-            ? lang.formatString(
-                lang.cdp_create.below_dust_limit,
-                selectedIlk.data.dust
-              )
-            : null) ||
-          (userCanDrawDaiAmount ? null : lang.cdp_create.draw_too_much_dai)
-        }
-        value={cdpParams.daiToDraw}
-        onChange={handleInputChange}
-      />,
+          key = "daiToDraw"
+          name = "daiToDraw"
+          after = "DAI"
+          width = {300} type = "number"
+          failureMessage = {(belowDustLimit
+                                 ? lang.formatString(
+                                       lang.cdp_create.below_dust_limit,
+                                       selectedIlk.data.dust)
+                                 : null) ||
+                            (userCanDrawDaiAmount
+                                 ? null
+                                 : lang.cdp_create.draw_too_much_dai)} value =
+              {cdpParams.daiToDraw} onChange =
+          {
+            handleInputChange
+          } />,
       <Grid gridRowGap="xs" key="keytodrawinfo">
         <Box key="ba">
           <Text t="subheading">
             {lang.cdp_create.deposit_form_field3_after2}{' '}
-          </Text>
-          <Text
-            display="inline-block"
-            ml="s"
-            t="caption"
-            color="darkLavender"
+          </Text >
+              < Text
+          display = "inline-block"
+          ml = "s"
+          t = "caption"
+          color = "darkLavender"
             onClick={() => {
-              handleInputChange({
-                target: {
-                  name: 'daiToDraw',
-                  value: daiAvailable
-                }
-              });
+    handleInputChange({target : {name : 'daiToDraw', value : daiAvailable}});
             }}
           >
             {prettifyNumber(daiAvailable)} DAI
@@ -161,17 +141,15 @@ function OpenCDPForm({
               {renderAfter}
             </Grid>
           );
-        })}
+})
+}
       </Grid>
     </Grid>
   );
-}
+      }
 
-const CDPCreateDepositSidebar = ({
-  selectedIlk,
-  liquidationPrice,
-  collateralizationRatio
-}) => {
+      const CDPCreateDepositSidebar =
+          ({selectedIlk, liquidationPrice, collateralizationRatio}) => {
   const { lang } = useLanguage();
   const { liquidationRatio, stabilityFee } = selectedIlk.data;
   return (
